@@ -3,9 +3,9 @@ export class DbAddAccount implements AddAccount {
   private readonly encrypter: Encrypter
   private readonly addAccountRepository: AddAccountRepository
 
-  constructor (encrypter: Encrypter, addAccountRepositoryStub: AddAccountRepository) {
+  constructor (encrypter: Encrypter, addAccountRepository: AddAccountRepository) {
     this.encrypter = encrypter
-    this.addAccountRepository = addAccountRepositoryStub
+    this.addAccountRepository = addAccountRepository
   }
 
   private async passwordEncrypter (password: string): Promise<string> {
